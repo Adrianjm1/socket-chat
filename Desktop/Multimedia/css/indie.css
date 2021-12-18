@@ -1,0 +1,259 @@
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+   
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'open sans', 'Noto Sans JP', sans-serif;
+    background-color: #fef8f8;
+      
+      
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 400px;
+    background: blue;
+    background-size: cover;
+    background: -webkit-linear-gradient(to right, hsla(239, 96%, 27%, 0.459), hsla(244, 92%, 48%, 0.664)), url(../img/indiewall.jpeg) no-repeat;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(246, 97%, 25%, 0.459), hsla(268, 93%, 35%, 0.829)), url(../img/indiewall.jpeg) no-repeat ;
+    background-size: 110% 90%;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav{
+    text-align: center;
+    padding: 30px 50px 0 0;
+}
+
+nav a{
+    color:#fff;
+    font-weight: 800;
+    text-decoration: none;
+    margin-right: 10px;
+}
+nav ol {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+}
+
+nav ol li{
+margin-left: 15px;
+    
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: turquoise;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+}
+
+
+
+main .sobre-musica{
+    padding: 30px 0 60px 0;
+}
+
+.imagen-about-music{
+    float: left;
+    margin: 15px;
+    width: 48%;
+}
+
+.sobre-musica .contenido-textos{
+    text-align: center;
+    justify-content: right;
+}
+
+.contenido-textos h3{
+    margin-bottom: 5px;
+}
+
+.contenido-textos h3 span{
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+.about-music{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+
+
+
+/* footer */
+
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+.imagen-about-music{
+    width: 40%;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .card__image {      
+width: 500px;
+height: 300px;
+  }
+  
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    fill: var(--surface-color);
+   
+  }       
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+  }
+  
